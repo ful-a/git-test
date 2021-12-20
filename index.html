@@ -16,6 +16,12 @@ import Triangle from './class/classObj.js';
 //インスタンスの生成
 var triangle = new Triangle(3,8);
 console.log(triangle.getArea());
+
+import templateString from './class/template-string.js';
+const name = 'takeshi';
+const makeSentence = new templateString(name);
+console.log(makeSentence.callHello());
+
 </script>
 </body>
 </html>
