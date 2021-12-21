@@ -22,6 +22,25 @@ const name = 'takeshi';
 const makeSentence = new templateString(name);
 console.log(makeSentence.callHello());
 
+import getterAndSetter from './class/set-and-get.js'
+
+// staticはオブジェクト化（×× = new 〇〇）しなくても使えます
+console.log(getterAndSetter.staticMethod())
+
+// getter & setter
+let user = {
+  firstName: "John",
+  lastName: "Doe",
+};
+const makeName = new getterAndSetter(user)
+// getは関数の形で書いてはいけない
+console.log(makeName.fullName)
+// setは外部から値を渡せる
+makeName.fullName = user
+
+
+
+
 </script>
 </body>
 </html>
