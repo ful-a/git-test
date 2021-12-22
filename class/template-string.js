@@ -3,6 +3,8 @@ export default class TemplateString {
     this.name = name
   }
   callHello () {
-    return 'こんにちは' + this.name + 'さん\nよろしくお願いします'
+    // バッククオート@ + Shiftの方で囲う
+    return `こんにちは${this.name}さん
+    よろしくお願いします`
   }
 }
