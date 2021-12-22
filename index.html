@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  ・<link rel=”shortcut icon” href=”/images/favicon.ico”>
+  <link rel=”shortcut icon” href=”/images/favicon.ico”>
   <title>Document</title>
 </head>
 <body>
@@ -17,36 +17,36 @@ import Triangle from './class/classObj.js';
 var triangle = new Triangle(3,8);
 console.log(triangle.getArea());
 
-import templateString from './class/template-string.js';
+import TemplateString from './class/template-string.js';
 const name = 'takeshi';
-const makeSentence = new templateString(name);
+const makeSentence = new TemplateString(name);
 console.log(makeSentence.callHello());
 
-import getterAndSetter from './class/set-and-get.js'
+import GetterAndSetter from './class/set-and-get.js'
 
 // staticはオブジェクト化（×× = new 〇〇）しなくても使えます
-console.log(getterAndSetter.staticMethod())
+console.log(GetterAndSetter.staticMethod())
 
 // getter & setter
 let user = {
   firstName: "John",
   lastName: "Doe",
 };
-const makeName = new getterAndSetter(user)
+const makeName = new GetterAndSetter(user)
 // getは関数の形で書いてはいけない
 console.log(makeName.fullName)
 // setは外部から値を渡せる
 makeName.fullName = user
 
-import Animal from '../class/prototype.js'
-// import prototype from '../class/prototype.js'
-// console.log(prototype.value)
-// prototype.method()
+import Prototype from './class/prototype.js'
+const prototype = new Prototype(1)
+console.log(prototype.value)
+console.log(prototype.method())
+// console.log(prototype.methods.add1())
+// prototype.methods.add1()
+// prototype.add1()
+// console.log(prototype.method.add3())
 
-
-var o1 = new Animal();
-console.log(o1.type);
-o1.hello();
 
 </script>
 </body>
