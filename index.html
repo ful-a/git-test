@@ -8,7 +8,8 @@
   <title>Document</title>
 </head>
 <body>
-  <p>first commit</p>
+  <p id="name">first commit</p>
+  <p id="info"></p>
   
 <script type="module">
 //ファイルのimport
@@ -42,10 +43,15 @@ import Prototype from './class/prototype.js'
 const prototype = new Prototype(1)
 console.log(prototype.value)
 console.log(prototype.method())
-// console.log(prototype.methods.add1())
-// prototype.methods.add1()
-// prototype.add1()
-// console.log(prototype.method.add3())
+
+import Inheritance from './class/inheritance.js'
+let age = 27,
+    city = "大阪"
+const inh = new Inheritance(user, age, city)
+const nameFild = document.querySelector("#name")
+const infoFild = document.querySelector("#info")
+nameFild.textContent=`${inh.makeFullName}さんは`
+infoFild.textContent=inh.info()
 
 
 </script>
